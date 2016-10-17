@@ -14,6 +14,7 @@ class GalleryTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        Gallery.setup()
     }
     
     override func tearDown() {
@@ -21,15 +22,24 @@ class GalleryTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLoadImage() {
+        let expect = expectation(description: "Image should download")
+        
+        let url = URL(string: "https://myanimelist.cdn-dena.com/images/anime/11/75274.jpg")!
+        
+        Gallery.getImage(for: url) { (result) in
+            switch result {
+            case let .success(image):
+                break
+            case let .failure(error):
+                XCTFail("Error occured \(error)")
+            }
+            
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10) { (error) in
+            XCTAssertNil(error, "Test Timed Out \(error)")
         }
     }
     
