@@ -8,17 +8,25 @@
 
 import UIKit
 
+/// Allows management of currently loading images
 public class ArtLoader {
     
+    // MARK: - Varibles
     let url: URL
     let completion: (ImageResult) -> ()
     var task: URLSessionDataTask?
     
+    /// Default initialiser
+    ///
+    /// - Parameters:
+    ///   - url: url of the image
+    ///   - completion: completetion method
     init(url: URL, completion: @escaping (ImageResult) -> ()) {
         self.url = url
         self.completion = completion
     }
     
+    /// Runs the image fetch request
     public func run() {
         guard let cacheFolder = Gallery.galleryCacheFolder else {
             fatalError("Don't forget to setup Gallery!")
@@ -57,6 +65,7 @@ public class ArtLoader {
         task?.resume()
     }
     
+    /// Cancels the image fetch
     public func cancel() {
         task?.cancel()
     }

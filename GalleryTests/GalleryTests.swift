@@ -9,6 +9,7 @@
 import XCTest
 @testable import Gallery
 
+/// Test case for Gallerty
 class GalleryTests: XCTestCase {
     
     override func setUp() {
@@ -22,6 +23,7 @@ class GalleryTests: XCTestCase {
         super.tearDown()
     }
     
+    /// Tests loading an image
     func testLoadImage() {
         let expect = expectation(description: "Image should download")
         
