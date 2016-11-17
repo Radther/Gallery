@@ -34,12 +34,13 @@ public class ArtLoader {
         let fileName = url.absoluteString.replacingOccurrences(of: "/", with: "")
         let localUrl = cacheFolder.appendingPathComponent("\(fileName)")
         
-        if FileManager.default.fileExists(atPath: localUrl.path),
-            let imageData = FileManager.default.contents(atPath: localUrl.path),
-            let image = UIImage(data: imageData) {
-            completion(.success(image))
-            print("Got from Cache")
-            return
+        if Gallery.shouldCache {
+            if FileManager.default.fileExists(atPath: localUrl.path),
+                let imageData = FileManager.default.contents(atPath: localUrl.path),
+                let image = UIImage(data: imageData) {
+                completion(.success(image))
+                return
+            }
         }
         
         let request = URLRequest(url: url)
@@ -57,9 +58,10 @@ public class ArtLoader {
             
             self.completion(.success(image))
             
-            let imageData = UIImagePNGRepresentation(image)
-            FileManager.default.createFile(atPath: localUrl.path, contents: imageData, attributes: nil)
-            print(FileManager.default.fileExists(atPath: localUrl.path))
+            if Gallery.shouldCache {
+                let imageData = UIImagePNGRepresentation(image)
+                FileManager.default.createFile(atPath: localUrl.path, contents: imageData, attributes: nil)
+            }
         })
         
         task?.resume()

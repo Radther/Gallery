@@ -20,6 +20,9 @@
 		A840A15F1DB0F60100A74051 /* Gallery.h in Headers */ = {isa = PBXBuildFile; fileRef = A840A1511DB0F60100A74051 /* Gallery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A840A1691DB0F65300A74051 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840A1681DB0F65300A74051 /* Gallery.swift */; };
 		A84213B01DB4B9580061FFC9 /* ArtLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84213AF1DB4B9580061FFC9 /* ArtLoader.swift */; };
+		A883BB311DDE053C00B41ADC /* GalleryWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = A883BB2F1DDE053C00B41ADC /* GalleryWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A883BB351DDE054400B41ADC /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840A1681DB0F65300A74051 /* Gallery.swift */; };
+		A883BB361DDE054400B41ADC /* ArtLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84213AF1DB4B9580061FFC9 /* ArtLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		A840A1681DB0F65300A74051 /* Gallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		A840A16A1DB11FF100A74051 /* GalleryExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GalleryExample.playground; sourceTree = "<group>"; };
 		A84213AF1DB4B9580061FFC9 /* ArtLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtLoader.swift; sourceTree = "<group>"; };
+		A883BB2D1DDE053C00B41ADC /* GalleryWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GalleryWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A883BB2F1DDE053C00B41ADC /* GalleryWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalleryWatch.h; sourceTree = "<group>"; };
+		A883BB301DDE053C00B41ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A840A1581DB0F60100A74051 /* Gallery.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A883BB291DDE053C00B41ADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +138,7 @@
 				A840A15B1DB0F60100A74051 /* GalleryTests */,
 				A81F6D221DB13557005425B6 /* GalleryExampleApp */,
 				A81F6D371DB13557005425B6 /* GalleryExampleAppTests */,
+				A883BB2E1DDE053C00B41ADC /* GalleryWatch */,
 				A840A14F1DB0F60100A74051 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,6 +150,7 @@
 				A840A1571DB0F60100A74051 /* GalleryTests.xctest */,
 				A81F6D211DB13557005425B6 /* GalleryExampleApp.app */,
 				A81F6D341DB13557005425B6 /* GalleryExampleAppTests.xctest */,
+				A883BB2D1DDE053C00B41ADC /* GalleryWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +177,15 @@
 			path = GalleryTests;
 			sourceTree = "<group>";
 		};
+		A883BB2E1DDE053C00B41ADC /* GalleryWatch */ = {
+			isa = PBXGroup;
+			children = (
+				A883BB2F1DDE053C00B41ADC /* GalleryWatch.h */,
+				A883BB301DDE053C00B41ADC /* Info.plist */,
+			);
+			path = GalleryWatch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -170,6 +194,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A840A15F1DB0F60100A74051 /* Gallery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A883BB2A1DDE053C00B41ADC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A883BB311DDE053C00B41ADC /* GalleryWatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +279,24 @@
 			productReference = A840A1571DB0F60100A74051 /* GalleryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A883BB2C1DDE053C00B41ADC /* GalleryWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A883BB341DDE053C00B41ADC /* Build configuration list for PBXNativeTarget "GalleryWatch" */;
+			buildPhases = (
+				A883BB281DDE053C00B41ADC /* Sources */,
+				A883BB291DDE053C00B41ADC /* Frameworks */,
+				A883BB2A1DDE053C00B41ADC /* Headers */,
+				A883BB2B1DDE053C00B41ADC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GalleryWatch;
+			productName = GalleryWatch;
+			productReference = A883BB2D1DDE053C00B41ADC /* GalleryWatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -279,6 +329,11 @@
 						DevelopmentTeam = K68WDDJ6BS;
 						ProvisioningStyle = Automatic;
 					};
+					A883BB2C1DDE053C00B41ADC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = K68WDDJ6BS;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A840A1481DB0F60000A74051 /* Build configuration list for PBXProject "Gallery" */;
@@ -298,6 +353,7 @@
 				A840A1561DB0F60100A74051 /* GalleryTests */,
 				A81F6D201DB13557005425B6 /* GalleryExampleApp */,
 				A81F6D331DB13557005425B6 /* GalleryExampleAppTests */,
+				A883BB2C1DDE053C00B41ADC /* GalleryWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +384,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A840A1551DB0F60100A74051 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A883BB2B1DDE053C00B41ADC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,6 +432,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A840A15D1DB0F60100A74051 /* GalleryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A883BB281DDE053C00B41ADC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A883BB361DDE054400B41ADC /* ArtLoader.swift in Sources */,
+				A883BB351DDE054400B41ADC /* Gallery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +705,52 @@
 			};
 			name = Release;
 		};
+		A883BB321DDE053C00B41ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K68WDDJ6BS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GalleryWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ink.designdev.GalleryWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		A883BB331DDE053C00B41ADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K68WDDJ6BS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GalleryWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ink.designdev.GalleryWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -680,6 +798,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A883BB341DDE053C00B41ADC /* Build configuration list for PBXNativeTarget "GalleryWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A883BB321DDE053C00B41ADC /* Debug */,
+				A883BB331DDE053C00B41ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

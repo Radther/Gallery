@@ -31,6 +31,7 @@ public class Gallery {
     public static var galleryFolderName: String = "Gallery"
     static var galleryCacheFolder: URL?
     static var placeHolderImage: UIImage?
+    public static var shouldCache: Bool = true
     
     /// Setup method. Must be called before Gallery can be used
     public static func setup() {
@@ -43,7 +44,6 @@ public class Gallery {
             }
         }
         galleryCacheFolder = cacheUrl
-        print("GalleryCacheFolder \(galleryCacheFolder)")
     }
     
     /// Gets an image

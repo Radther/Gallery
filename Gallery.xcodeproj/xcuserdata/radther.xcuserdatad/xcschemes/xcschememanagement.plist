@@ -12,7 +12,12 @@
 		<key>GalleryExampleApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>3</integer>
+		</dict>
+		<key>GalleryWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>A840A1561DB0F60100A74051</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A883BB2C1DDE053C00B41ADC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
